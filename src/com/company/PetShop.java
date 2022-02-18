@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class PetShop {
 
     public static void main(String[] args) {
-        Dog dog1 = new Dog();
-        Dog dog2 = new Dog();
+        Dog dog1 = new Dog("Millie", 4, "play catch");
+        Dog dog2 = new Dog("Luna", 1, "chew everything");
 
-        Cat cat1 = new Cat();
-        Cat cat2 = new Cat();
+        Cat cat1 = new Cat("Midnight", 10, "cuddles");
+        Cat cat2 = new Cat("Sven", 2, "knead dough");
 
-
+/* old code:
         dog1.setNameOfAnimal("Millie");
         dog1.setAgeOfAnimal(4);
         dog1.setFunFact("play catch");
@@ -28,14 +28,15 @@ public class PetShop {
         cat2.setAgeOfAnimal(2);
         cat2.setFunFact("knead dough");
 
-
+*/
         System.out.println("Thank you for looking for your forever family pet. \n" +
                 "Here are the following dogs and cats we have available: \n");
-        System.out.println("DOGS: \n" + dog1.getNameOfAnimal() + " is " + dog1.getAgeOfAnimal() + " years old and loves to " + dog1.getFunFact() +
-                "\n" + dog2.getNameOfAnimal() + " is " + dog2.getAgeOfAnimal() + "years old and loves to " + dog2.getFunFact());
-        System.out.println("\n" + "CATS: " + "\n" + cat1.getNameOfAnimal() + " is " + cat1.getAgeOfAnimal() + " years old and loves " + cat1.getFunFact() + ". \n" +
-                cat2.getNameOfAnimal() + " is " + cat2.getAgeOfAnimal() + " years old and loves to " + cat2.getFunFact());
-
+        System.out.println("DOGS: \n" );
+        dog1.describeAnimal();
+        dog2.describeAnimal();
+        System.out.println("\n" + "CATS: ");
+        cat1.describeAnimal();
+        cat2.describeAnimal();
         System.out.println("\n" + "Please enter the name of the animal you would like to take home");
 
 
@@ -46,7 +47,7 @@ public class PetShop {
 
         while (isNotFound) {
             if (input.equals(dog1.getNameOfAnimal()) || input.equals(dog2.getNameOfAnimal()) || input.equals(cat1.getNameOfAnimal()) || input.equals(cat2.getNameOfAnimal())) {
-                System.out.println("That pet is available!");
+                System.out.println("That pet is available! Please take good care of your new Family Member.");
                 isNotFound = false;
             } else {
                 System.out.println("That pet is not available. Please ask for another animal:");

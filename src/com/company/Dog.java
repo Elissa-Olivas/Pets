@@ -5,6 +5,12 @@ public class Dog {
     private int ageOfAnimal;
     private String funFact;
 
+    public Dog (String nameOfAnimal, int ageOfAnimal, String funFact) {
+        this.nameOfAnimal = nameOfAnimal;
+        this.ageOfAnimal = ageOfAnimal;
+        this.funFact= funFact;
+    }
+
     //set name
     public void setNameOfAnimal(String name) {
         nameOfAnimal = name;
@@ -34,4 +40,7 @@ public class Dog {
         return funFact;
     }
 
+    public void describeAnimal() {
+        System.out.println(getNameOfAnimal() + ", who is " + getAgeOfAnimal() + " and loves to " + getFunFact() + ".");
+    }
 }
